@@ -1,0 +1,33 @@
+SELECT 
+    Post_Month AS Month,
+    ROUND( AVG(Lifetime_Post_Total_Reach),0) AS    Lifetime_Post_Total_Reach,
+    FROM 
+    refined-circuit-421112.PET_metrics.dataset_fb
+WHERE 
+    Post_Month IN ('January','February','March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+GROUP BY 
+    Post_Month;
+
+
+SELECT 
+    Post_Month AS Month,
+    MIN(Page_total_likes) AS start,
+    MAX(Page_total_likes) AS finish,
+    (MAX(Page_total_likes) - MIN(Page_total_likes)) AS increase
+FROM 
+    refined-circuit-421112.PET_metrics.dataset_fb
+WHERE 
+    Post_Month IN ('January','February','March', 'April', 'May', 'June', 
+    'July', 'August', 'September', 'October', 'November', 'December')
+GROUP BY 
+    Post_Month;
+
+
+Select
+  min(Page_total_likes) AS start,
+  max(Page_total_likes) AS finish,
+  (max (Page_total_likes) - min(Page_total_likes))AS increase,
+FROM `refined-circuit-421112.PET_metrics.dataset_fb`
+WHERE Post_Month IN ( 'January','February','March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December');
+Analysis of social network data and consumer behavior of the content of the Facebook page of the global cosmetic brand
