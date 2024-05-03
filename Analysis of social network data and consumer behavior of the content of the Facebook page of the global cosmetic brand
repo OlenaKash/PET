@@ -1,3 +1,5 @@
 # Analysis of social network data and consumer behavior of the content of the Facebook page of the global cosmetic brand "N N N"
 # Project reference in tableau public
 https://public.tableau.com/views/PETmetricssm/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
+To work with the data, I chose to pre-process and clean the data in Power Query.
+ The next tool I used is BigQuery public and SQL queries.
